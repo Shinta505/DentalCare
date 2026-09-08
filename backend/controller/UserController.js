@@ -115,7 +115,7 @@ export const loginHandler = async (req, res) => {
     // Simpan juga di cookie (httpOnly)
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
-      secure: false, // kalau pakai HTTPS jadi true
+      secure: true, // kalau pakai HTTPS jadi true
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
