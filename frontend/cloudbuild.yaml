@@ -1,0 +1,20 @@
+steps:
+  - name: 'node:20'  # pakai image node untuk build
+    dir: 'frontend_bc'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        npm install
+        npm run build
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud app deploy frontend_bc/app.yaml --quiet --promote
+
+timeout: '1600s'
+options:
+  logging: CLOUD_LOGGING_ONLY

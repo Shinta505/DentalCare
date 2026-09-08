@@ -1,0 +1,22 @@
+runtime: nodejs20
+service: final-project-prak-tcc
+
+handlers:
+  - url: /static
+    static_dir: build/static
+
+  - url: /(.*\.js)
+    static_files: build/\1
+    upload: build/.*\.js
+
+  - url: /(.*\.css)
+    static_files: build/\1
+    upload: build/.*\.css
+
+  - url: /(.*\.(png|jpg|jpeg|gif|ico|json|webmanifest))
+    static_files: build/\1
+    upload: build/.*\.(png|jpg|jpeg|gif|ico|json|webmanifest)
+
+  - url: /.*
+    static_files: build/index.html
+    upload: build/index.html

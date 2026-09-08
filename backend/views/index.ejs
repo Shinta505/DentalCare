@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Documentation Table</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        margin: 20px;
+        color: #333;
+      }
+      h2 {
+        color: #2c3e50;
+        margin-top: 40px;
+        border-left: 5px solid #3498db;
+        padding-left: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #3498db;
+        color: white;
+      }
+      .method {
+        font-weight: bold;
+        padding: 4px 8px;
+        border-radius: 4px;
+        color: white;
+        font-size: 0.9rem;
+      }
+      .GET { background-color: #27ae60; }
+      .POST { background-color: #2980b9; }
+      .PUT { background-color: #f39c12; }
+      .DELETE { background-color: #c0392b; }
+      .protected {
+        color: #e74c3c;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📘 API Documentation Table</h1>
+
+    <div class="section">
+      <h2>User</h2>
+      <table>
+        <tr><th>Method</th><th>Endpoint</th><th>Description</th><th>Protection</th></tr>
+        <tr><td class="method POST">POST</td><td>/register</td><td>Register user baru</td><td>-</td></tr>
+        <tr><td class="method POST">POST</td><td>/login</td><td>Login dan dapatkan token</td><td>-</td></tr>
+        <tr><td class="method DELETE">DELETE</td><td>/logout</td><td>Logout user</td><td>-</td></tr>
+        <tr><td class="method GET">GET</td><td>/users</td><td>Ambil semua user</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method GET">GET</td><td>/users/:id</td><td>Ambil user berdasarkan ID</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method PUT">PUT</td><td>/edit-user/:id</td><td>Edit data user</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method DELETE">DELETE</td><td>/delete-user/:id</td><td>Hapus user</td><td>-</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Pasien</h2>
+      <table>
+        <tr><th>Method</th><th>Endpoint</th><th>Description</th><th>Protection</th></tr>
+        <tr><td class="method GET">GET</td><td>/pasien</td><td>Ambil semua pasien</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method GET">GET</td><td>/pasien/:id</td><td>Ambil pasien berdasarkan ID</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method POST">POST</td><td>/add-pasien</td><td>Tambah pasien</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method PUT">PUT</td><td>/pasien/:id</td><td>Update data pasien</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method DELETE">DELETE</td><td>/pasien/:id</td><td>Hapus pasien</td><td class="protected">🔒 Token</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Dokter</h2>
+      <table>
+        <tr><th>Method</th><th>Endpoint</th><th>Description</th><th>Protection</th></tr>
+        <tr><td class="method GET">GET</td><td>/doctor</td><td>Ambil semua dokter</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method GET">GET</td><td>/dokter/:id_dokter</td><td>Ambil dokter berdasarkan ID</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method POST">POST</td><td>/add-doctor</td><td>Tambah dokter</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method PUT">PUT</td><td>/dokter/:id_dokter</td><td>Update data dokter</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method DELETE">DELETE</td><td>/dokter/:id_dokter</td><td>Hapus dokter</td><td class="protected">🔒 Token</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Obat</h2>
+      <table>
+        <tr><th>Method</th><th>Endpoint</th><th>Description</th><th>Protection</th></tr>
+        <tr><td class="method GET">GET</td><td>/obat</td><td>Ambil semua obat</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method GET">GET</td><td>/obat/:id_obat</td><td>Ambil obat berdasarkan ID</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method POST">POST</td><td>/add-obat</td><td>Tambah obat</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method PUT">PUT</td><td>/obat/:id_obat</td><td>Update data obat</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method DELETE">DELETE</td><td>/obat/:id_obat</td><td>Hapus obat</td><td class="protected">🔒 Token</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Periksa</h2>
+      <table>
+        <tr><th>Method</th><th>Endpoint</th><th>Description</th><th>Protection</th></tr>
+        <tr><td class="method GET">GET</td><td>/periksa</td><td>Ambil semua data periksa</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method GET">GET</td><td>/periksa/:id_periksa</td><td>Ambil data periksa berdasarkan ID</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method POST">POST</td><td>/add-periksa</td><td>Tambah data periksa</td><td>-</td></tr>
+        <tr><td class="method PUT">PUT</td><td>/periksa/:id_periksa</td><td>Update data periksa</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method DELETE">DELETE</td><td>/periksa/:id_periksa</td><td>Hapus data periksa</td><td class="protected">🔒 Token</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Struk</h2>
+      <table>
+        <tr><th>Method</th><th>Endpoint</th><th>Description</th><th>Protection</th></tr>
+        <tr><td class="method GET">GET</td><td>/struk</td><td>Ambil semua struk</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method GET">GET</td><td>/pasien/periksa/struk/:id_struk</td><td>Ambil struk berdasarkan ID</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method POST">POST</td><td>/struk</td><td>Tambah struk</td><td>-</td></tr>
+        <tr><td class="method PUT">PUT</td><td>/struk/:id</td><td>Update struk</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method DELETE">DELETE</td><td>/struk/:id</td><td>Hapus struk</td><td class="protected">🔒 Token</td></tr>
+        <tr><td class="method GET">GET</td><td>/struk/selesai</td><td>Ambil struk selesai</td><td class="protected">🔒 Token</td></tr>
+      </table>
+    </div>
+  </body>
+</html>
