@@ -13,6 +13,9 @@ import sequelize from "./config/Database.js";
 dotenv.config();
 const app = express();
 
+app.set("view engine", "ejs");
+app.set("views", "./views");
+
 app.use(cookieParser());
 
 // 1. Sesuaikan CORS agar mengizinkan akses dari domain Vercel nantinya
