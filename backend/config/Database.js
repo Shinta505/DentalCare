@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
+import pg from "pg";
 
 dotenv.config();
 
@@ -10,11 +11,12 @@ const DB_PASSWORD = process.env.DB_PASSWORD;
 const db = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
   host: process.env.DB_HOST,
   port: process.env.DB_PORT || 5432,
-  dialect: "postgres", // Diubah dari mysql ke postgres
+  dialect: "postgres",
+  dialectModule: pg,
   dialectOptions: {
     ssl: {
-      require: true, 
-      rejectUnauthorized: false 
+      require: true,
+      rejectUnauthorized: false
     }
   }
 });
