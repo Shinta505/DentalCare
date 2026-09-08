@@ -1,7 +1,7 @@
 // src/utils.js
 import axios from 'axios';
 
-export const BASE_URL = 'http://localhost:5000/';
+export const BASE_URL = 'https://be-dental-care.vercel.app/';
 
 export const API = axios.create({
   baseURL: BASE_URL,
