@@ -47,5 +47,9 @@ if (process.env.NODE_ENV !== 'production') {
   app.listen(port, '0.0.0.0', () => console.log(`Server running on port ${port}`));
 }
 
+app.get('/', (req, res) => {
+  res.render('index.ejs');
+});
+
 // 4. Baris WAJIB agar Vercel bisa membaca dan menjalankan routing API-mu
 export default app;
