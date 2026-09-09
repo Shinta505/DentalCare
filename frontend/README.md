@@ -97,14 +97,14 @@ Berikut adalah instruksi teknis untuk mempersiapkan lingkungan pengembangan fron
 
 1. Lakukan kloning pada repositori frontend ini ke dalam direktori lokal:
 ```bash
-git clone https://github.com/username/dental-care-frontend.git
+git clone https://github.com/Shinta505/DentalCare.git
 
 ```
 
 
 2. Arahkan *command line* / *terminal* ke dalam direktori proyek:
 ```bash
-cd dental-care-frontend
+cd frontend
 
 ```
 
