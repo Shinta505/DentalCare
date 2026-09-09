@@ -76,7 +76,7 @@ const DokterList = () => {
   };
 
   const confirmDelete = () => {
-    deleteDoctor(selectedDoctor.id);
+    deleteDoctor(selectedDoctor.id_dokter);
     closeModal();
   };
 
