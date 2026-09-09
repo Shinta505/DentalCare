@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# 📚 DentalCare (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Platform manajemen dan layanan kesehatan gigi berbasis web yang dirancang untuk membantu pasien dalam melakukan reservasi dokter, melihat rekam medis, serta mengelola administrasi klinik secara interaktif dan terstruktur.
 
-## Available Scripts
+🔗 **Live Website:** [https://dental-care-five-mocha.vercel.app](https://dental-care-five-mocha.vercel.app)
 
-In the project directory, you can run:
+🔗 **Live Backend API:** [https://be-dental-care.vercel.app](https://be-dental-care.vercel.app)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📖 About Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**DentalCare** adalah platform sistem informasi klinik gigi yang berfokus pada kemudahan akses layanan kesehatan gigi bagi pasien serta efisiensi operasional bagi tenaga medis dan administrator klinik.
 
-### `npm test`
+Platform ini membantu pasien dalam mengatur jadwal pemeriksaan, melihat daftar dokter spesialis, memantau rekam medis pemeriksaan, hingga memproses pembayaran atau melihat struk tindakan medis secara digital.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Project ini dikembangkan sebagai **full-stack web application** dengan pemisahan arsitektur *frontend* dan *backend*, serta terintegrasi dengan database relasional serta sistem autentikasi berbasis token.
 
-### `npm run build`
+### 🎯 Tujuan Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Memudahkan pasien dalam melakukan pendaftaran dan penjadwalan pemeriksaan gigi secara online.
+* Menyediakan informasi profil dokter dan ketersediaan jadwal praktik yang transparan.
+* Mendigitalisasi pencatatan rekam medis pemeriksaan dan resep obat pasien.
+* Menyediakan manajemen data obat, resep, dan transaksi keuangan klinik yang terpusat.
+* Meningkatkan efisiensi pelayanan administrasi klinik secara keseluruhan.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Features
 
-### `npm run eject`
+### 👨‍⚕️ Manajemen Dokter
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Menampilkan daftar lengkap dokter gigi yang bertugas di klinik.
+* Informasi detail mengenai spesialisasi dan jadwal praktik dokter.
+* Pencarian dan filter data dokter untuk memudahkan pasien.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 💊 Manajemen Obat
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Pengelolaan data inventaris obat klinik.
+* Informasi ketersediaan stok obat, jenis, dan harga satuan.
+* Integrasi data obat ke dalam resep pemeriksaan pasien.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🧑‍🤝‍🧑 Manajemen Pasien
 
-## Learn More
+* Pendataan profil pasien yang terintegrasi dengan sistem klinik.
+* Riwayat pendaftaran dan informasi personal pasien.
+* Manajemen akses data pasien oleh administrator.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🩺 Pemeriksaan & Rekam Medis (Periksa)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Pencatatan proses pemeriksaan pasien oleh dokter.
+* Input diagnosa, keluhan, dan tindakan medis yang diberikan.
+* Pengelolaan resep obat yang harus diambil pasien setelah pemeriksaan.
 
-### Code Splitting
+### 🧾 Struk & Pembayaran
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Pembuatan struk pembayaran otomatis berdasarkan tindakan dan obat yang diberikan.
+* Rekapitulasi rincian biaya pemeriksaan pasien.
+* Riwayat transaksi keuangan klinik.
 
-### Analyzing the Bundle Size
+### 👤 Authentication & Authorization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Registrasi dan login akun pengguna (Pasien, Dokter, Admin).
+* Session management menggunakan token keamanan (*JWT & Refresh Token*).
+* Pembatasan hak akses halaman berdasarkan peran pengguna (*role-based access control*).
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🛠️ Tech Stack
 
-### Advanced Configuration
+### Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* React JS
+* CSS3
+* JavaScript JSX dan HTML
 
-### Deployment
+### Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Node.js
+* Express.js
+* Sequelize (ORM)
 
-### `npm run build` fails to minify
+### Database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* PostgreSQL
+
+### Deployment & Tools
+
+* Vercel
+* GitHub
+
+---
+
+## ⚙️ Installation
+
+Berikut adalah instruksi teknis untuk mempersiapkan lingkungan pengembangan frontend secara lokal:
+
+1. Lakukan kloning pada repositori frontend ini ke dalam direktori lokal:
+```bash
+git clone https://github.com/username/dental-care-frontend.git
+
+```
+
+
+2. Arahkan *command line* / *terminal* ke dalam direktori proyek:
+```bash
+cd dental-care-frontend
+
+```
+
+
+3. Lakukan instalasi seluruh dependensi yang dibutuhkan oleh sistem menggunakan NPM:
+```bash
+npm install
+
+```
+
+
+
+## Cara Menjalankan Sistem (How to Run)
+
+Untuk menjalankan peladen (*server*) pengembangan lokal frontend, ikuti langkah berikut:
+
+1. Jalankan mode pengembangan lokal:
+```bash
+npm run start
+
+```
+
+
+*(Atau sesuaikan dengan skrip start pada berkas `package.json` proyek)*
+2. Buka peramban web (*web browser*) dan akses alamat lokal yang tertera pada terminal (biasanya `http://localhost:3000`).
