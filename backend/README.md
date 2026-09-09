@@ -117,14 +117,14 @@ Instruksi teknis untuk mempersiapkan lingkungan pengembangan secara lokal:
 
 1. Lakukan kloning pada repositori utama ke dalam direktori lokal:
 ```bash
-git clone https://github.com/.../DentalCare.git
+git clone https://github.com/Shinta505/DentalCare.git
 
 ```
 
 
 2. Arahkan *command line* / *terminal* ke dalam direktori `backend`:
 ```bash
-cd DentalCare/backend
+cd backend
 
 ```
 
